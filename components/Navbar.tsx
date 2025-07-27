@@ -90,7 +90,7 @@ export default function Navbar() {
               className="p-2 rounded-md hover:bg-gray-100 transition"
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6 text-black" /> : <Menu className="w-6 h-6 text-black" />}
             </button>
           </div>
         </div>
