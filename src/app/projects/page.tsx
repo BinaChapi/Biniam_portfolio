@@ -11,7 +11,10 @@ import {
   SiReact,
   SiFirebase,
   SiExpo,
+  SiSupabase,
+  SiGooglemaps 
 } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
 import { Project } from "../../../types/project";
 
 // Map tech names to icons
@@ -23,6 +26,9 @@ const techIcons = {
   "React Native": <SiReact className="text-cyan-500" />,
   Firebase: <SiFirebase className="text-yellow-500" />,
   Expo: <SiExpo />,
+  Supabase: <SiSupabase className="text-green-500"/>,
+  "Google Map": <SiGooglemaps className="text-green-500"/>,
+  "REST API": <TbApi className="text-blue-500"/>,
 };
 
 
