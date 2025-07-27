@@ -14,6 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <head>
+        <link rel="icon" type="image/png" href="/favicon.png" />
+      </head>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );
