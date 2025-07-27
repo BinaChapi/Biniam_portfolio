@@ -26,7 +26,7 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <header className="w-full bg-white/60 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+    <header className="w-full bg-white/10 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
       <nav className="max-w-4xl mx-auto flex items-center justify-between py-4 px-4">
         <Link
           href="/"
