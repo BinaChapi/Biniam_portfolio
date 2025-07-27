@@ -1,6 +1,6 @@
-import { FaReact, FaNodeJs, FaPython, FaJs,FaJava  } from "react-icons/fa";
-import { SiCplusplus, SiMongodb, SiMysql } from "react-icons/si";
 import { Skill } from "../types/Skill";
+import { FaReact,FaNodeJs, FaPython, FaJs,FaJava  } from "react-icons/fa";
+import { SiCplusplus, SiMongodb, SiMysql } from "react-icons/si";
 import { UserProfile } from "../types/UserProfile";
 
 // Image path

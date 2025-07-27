@@ -1,39 +1,22 @@
 "use client";
-import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useRef } from "react";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import { projects } from "../../../constants/projects";
-import {
-  SiNextdotjs,
-  SiMongodb,
-  SiTailwindcss,
-  SiStripe,
-  SiReact,
-  SiFirebase,
-  SiExpo,
-  SiSupabase,
-  SiGooglemaps 
-} from "react-icons/si";
-import { TbApi } from "react-icons/tb";
 import { Project } from "../../../types/project";
-
-// Map tech names to icons
-const techIcons = {
-  "Next.js": <SiNextdotjs />,
-  MongoDB: <SiMongodb className="text-green-600" />,
-  Tailwind: <SiTailwindcss className="text-sky-500" />,
-  Stripe: <SiStripe className="text-indigo-500" />,
-  "React Native": <SiReact className="text-cyan-500" />,
-  Firebase: <SiFirebase className="text-yellow-500" />,
-  Expo: <SiExpo />,
-  Supabase: <SiSupabase className="text-green-500"/>,
-  "Google Map": <SiGooglemaps className="text-green-500"/>,
-  "REST API": <TbApi className="text-blue-500"/>,
-};
-
+import { techIcons } from "../../../lib/techIcons";
 
 export default function ProjectsPage() {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const offset = direction === "left" ? -300 : 300;
+      scrollRef.current.scrollBy({ left: offset, behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="bg-white min-h-screen">
@@ -97,12 +80,53 @@ export default function ProjectsPage() {
             <h2 className="text-3xl font-bold mb-2 text-gray-800">
               Project: {activeProject.title}
             </h2>
-            <p className="text-gray-600 mb-6 max-w-2xl">
+            <p className="text-gray-600 mb-4 max-w-2xl">
               {activeProject.description}
             </p>
 
-              {/* Horizontal Image Gallery with Colored Backgrounds */}
-              <div className="flex flex-row gap-4 max-w-full overflow-x-auto py-4 px-1">
+            {/* Technologies */}
+            <div className="mt-4">
+              <h4 className="font-semibold text-gray-800 mb-2">
+                Technologies Used
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {activeProject.tech.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="flex items-center gap-1 bg-gray-200 px-3 py-1 rounded-full text-sm text-gray-800"
+                  >
+                    {techIcons[tech as keyof typeof techIcons]} {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* GitHub Button */}
+            <div className="mt-6">
+              <a
+                href={activeProject.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-gray-900 text-white px-6 py-2 rounded-full text-sm hover:bg-gray-800 transition"
+              >
+                View on GitHub →
+              </a>
+            </div>
+
+            {/* Image Carousel */}
+            <div className="relative mt-6">
+            <button
+              onClick={() => scroll("left")}
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-700 border border-gray-300 shadow-md p-2 rounded-full z-10 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+              aria-label="Scroll left"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+              <div
+                ref={scrollRef}
+                className="flex flex-row gap-4 max-w-full overflow-x-auto py-4 px-6 scrollbar-hide scroll-smooth"
+              >
                 {activeProject.images.map((src, index) => (
                   <div
                     key={index}
@@ -119,34 +143,13 @@ export default function ProjectsPage() {
                 ))}
               </div>
 
-            {/* Technologies */}
-            <div className="mt-6">
-              <h4 className="font-semibold text-gray-800 mb-2">
-                Technologies Used
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {activeProject.tech.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="flex items-center gap-1 bg-gray-200 px-3 py-1 rounded-full text-sm text-gray-800"
-                  >
-                    {techIcons[tech as keyof typeof techIcons]} {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-
-            {/* GitHub Button */}
-            <div className="mt-6">
-              <a
-                href={activeProject.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-gray-900 text-white px-6 py-2 rounded-full text-sm hover:bg-gray-800 transition"
-              >
-                View on GitHub →
-              </a>
+                <button
+                  onClick={() => scroll("right")}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-700 border border-gray-300 shadow-md p-2 rounded-full z-10 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                  aria-label="Scroll right"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
             </div>
           </div>
         </div>
@@ -166,6 +169,13 @@ export default function ProjectsPage() {
         }
         .animate-fadeInUp {
           animation: fadeInUp 0.3s ease-out;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
       `}</style>
     </div>
