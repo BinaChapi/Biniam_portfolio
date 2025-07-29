@@ -41,4 +41,23 @@ export const projects: Project[] = [
     tech: ["React Native", "Expo", "REST API", "Supabase",],
     github: "https://github.com/BinaChapi/DareApp"
   },
+  {
+    title: "Online Chat based Gaming platform",
+    description: "An online chat-based gaming platform is a dynamic mobile app that blends social interaction with casual gaming, creating a fun and engaging experience. Users can join chat rooms, play quick multiplayer games (like trivia, word puzzles, or card games), and compete on leaderboards while chatting in real time. The app fosters community through features like private messaging, group chats, virtual rewards, and customizable profiles, keeping players hooked with daily challenges and tournaments. Monetization options include in-app purchases, ads, and premium memberships, making it both entertaining and profitable",
+    images: [
+      "/images/online_1.jpg",
+      "/images/online_2.jpg",
+      "/images/online_3.jpg",
+      "/images/online_4.jpg",
+      "/images/online_5.jpg",
+      "/images/online_6.jpg",
+      "/images/online_7.jpg",
+      "/images/online_8.jpg",
+      "/images/online_9.jpg",
+      "/images/online_10.jpg",
+      "/images/online_11.jpg",
+    ],
+    tech: ["React Native", "Expo", "REST API", "Supabase",],
+    github: "https://github.com/BinaChapi/chewata_x"
+  }
 ];
