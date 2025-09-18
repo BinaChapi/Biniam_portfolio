@@ -19,6 +19,7 @@ export type TechName =
   | "MongoDB"
   | "Tailwind"
   | "Stripe"
+  |"React"
   | "React Native"
   | "Firebase"
   | "Expo"
@@ -33,6 +34,7 @@ export const techIcons: Record<TechName, JSX.Element> = {
   Tailwind: <SiTailwindcss className="text-sky-500" />,
   Stripe: <SiStripe className="text-indigo-500" />,
   "React Native": <SiReact className="text-cyan-500" />,
+  "React": <SiReact className="text-cyan-500" />,
   Firebase: <SiFirebase className="text-yellow-500" />,
   Expo: <SiExpo />,
   Supabase: <SiSupabase className="text-green-500" />,

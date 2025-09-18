@@ -2,6 +2,19 @@ import { Project } from "../types/project";
 
 export const projects: Project[] = [
   {
+    title: "CatchUp Agency Website",
+    description: "A Website for a Marketing and Advertising Agency .",
+    images: [
+      "/images/catchup_1.png",
+      "/images/catchup_2.png",
+      "/images/catchup_3.png",
+      "/images/catchup_4.png",
+      "/images/catchup_5.png",
+    ],
+    tech: ["React", "Next.js", "Tailwind",],
+    github: "https://github.com/BinaChapi/Catch_Up",
+  },
+  {
     title: "Currency Exchange App",
     description: "A mobile app that allows users to exchange both local and foreign currencies with real-time conversion rates and historical data tracking.",
     images: [

@@ -5,14 +5,28 @@ import { userData } from "../lib/utils";
 export default function Hero() {
   return (
     <section className="relative max-w-4xl mx-auto px-4 pt-16 pb-10 flex flex-col items-center">
-      {/* Glassy background banner */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-44 bg-amber-200/50 backdrop-blur-lg rounded-3xl shadow-lg z-0" />
+      {/* Animated glassy background banner */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-44 backdrop-blur-lg rounded-3xl shadow-lg z-0 animate-gradient"
+        style={{
+          background: `linear-gradient(
+            270deg,
+            rgba(255, 94, 98, 0.3),
+            rgba(255, 195, 113, 0.3),
+            rgba(94, 255, 175, 0.3),
+            rgba(113, 168, 255, 0.3),
+            rgba(201, 113, 255, 0.3),
+            rgba(255, 113, 179, 0.3)
+          )`,
+          backgroundSize: "1200% 1200%",
+        }}
+      />
       <div className="relative z-10 flex flex-col items-center w-full">
         <div className="flex flex-col md:flex-row items-center w-full gap-8 mt-8">
           {/* Left: Name and subtitle */}
           <div className="flex-1 flex flex-col items-center md:items-start">
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2 text-center md:text-left tracking-tight">
-               {userData.fname} {userData.lname}
+              {userData.fname} {userData.lname}
             </h1>
             <p className="text-2xl md:text-1xl text-gray-600 mb-4 text-center md:text-left">
               Web & Mobile App Developer
@@ -33,6 +47,25 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Tailwind CSS animation keyframes */}
+      <style jsx>{`
+        @keyframes gradientBG {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        .animate-gradient {
+          animation: gradientBG 20s ease infinite;
+        }
+      `}</style>
     </section>
   );
 }
