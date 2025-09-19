@@ -4,23 +4,32 @@ import Link from "next/link";
 
 export default function ProjectList() {
   return (
-    <section className="max-w-4xl mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold text-gray-800 mb-10">
-        Featured Projects
-      </h2>
+    <section className="max-w-6xl mx-auto px-6 py-16">
+      {/* Heading */}
+      <div className="text-center mb-14">
+        <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">
+          Featured Projects
+        </h2>
+        <p className="mt-3 text-gray-600 text-lg max-w-2xl mx-auto">
+          A showcase of selected projects that highlight design, performance, and
+          modern development practices.
+        </p>
+      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Project Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {projects.slice(0, 3).map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
       </div>
 
-      <div className="flex justify-center mt-10">
+      {/* View All Button */}
+      <div className="flex justify-center mt-14">
         <Link
           href="/projects"
-          className="px-6 py-2  bg-white text-black hover:bg-gray-100 transition font-bold"
+          className="inline-block px-6 py-3 bg-black text-white font-semibold text-sm rounded-full shadow hover:bg-black/80 hover:shadow-lg transition-all duration-300"
         >
-          View All Projects
+          View All Projects →
         </Link>
       </div>
     </section>

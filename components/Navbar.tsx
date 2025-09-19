@@ -36,7 +36,7 @@ export default function Navbar() {
             setIsOpen(false);
           }}
         >
-          <span className="font-semibold">{userData.fname}'s Portfolio</span>
+          <span className="font-bold text-black">{userData.fname}'s Portfolio</span>
         </Link>
 
         <div className="flex items-center gap-1">

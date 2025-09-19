@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row items-center w-full gap-8 mt-8">
           {/* Left: Name and subtitle */}
           <div className="flex-1 flex flex-col items-center md:items-start">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2 text-center md:text-left tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-2 text-center md:text-left tracking-tight">
               {userData.fname} {userData.lname}
             </h1>
             <p className="text-2xl md:text-1xl text-gray-600 mb-4 text-center md:text-left">
