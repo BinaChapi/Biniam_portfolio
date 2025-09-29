@@ -16,13 +16,13 @@ export default function AboutPage() {
             <p className="text-xl font-semibold text-black/90 mb-4">{userData.fname} {userData.lname}</p>
             <div className="space-y-4 text-gray-800">
               <p>
-                I’m a 22-year-old Computer Science student with a deep passion for software development, especially in the field of app development.
+                I’m a 23-year-old Computer Science student with a deep passion for software development, especially in the field of mobile app web app development.
               </p>
               <p>
-                My journey began with curiosity and quickly evolved into a mission to build intuitive and high-performance applications that improve people’s lives. I enjoy designing and coding user-centric solutions, and I’m always exploring new technologies and frameworks.
+                My journey began with interest and quickly evolved into a mission to build high-performance applications that improve people’s lives. I enjoy designing and coding user-centric solutions, and I’m always exploring new technologies and frameworks.
               </p>
               <p>
-                I’m currently focused on honing my skills in full-stack development, mobile-first design, and scalable architecture. I believe in continuous learning, clean code, and impactful digital products.
+                I’m currently focused on sharpen my skills in full-stack development, mobile-first design, and scalable architecture. I believe in continuous learning, clean code, and impactful digital products.
               </p>
             </div>
           </div>
