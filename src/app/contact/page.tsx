@@ -32,10 +32,13 @@ export default function ContactPage() {
 
       <div className="flex-grow bg-gradient-to-br from-white to-gray-100 flex items-center justify-center px-4">
         <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-3xl">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">Get in Touch</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-2">
+            Get in Touch
+          </h2>
           <p className="text-gray-600 mb-6">
-            I'm always open to discussing new projects, creative ideas, or opportunities to collaborate.
-            Feel free to reach out, and I’ll get back to you as soon as possible.
+            I'm always open to discussing new projects, creative ideas, or
+            opportunities to collaborate. Feel free to reach out, and I’ll get
+            back to you as soon as possible.
           </p>
 
           {alreadySubmitted ? (
@@ -45,7 +48,9 @@ export default function ContactPage() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Your Name
+                </label>
                 <input
                   id="name"
                   type="text"
@@ -55,10 +60,16 @@ export default function ContactPage() {
                   className="text-black w-full px-4 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
                   required
                 />
-                <ValidationError prefix="Name" field="name" errors={state.errors} />
+                <ValidationError
+                  prefix="Name"
+                  field="name"
+                  errors={state.errors}
+                />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Your Email
+                </label>
                 <input
                   id="email"
                   type="email"
@@ -69,10 +80,16 @@ export default function ContactPage() {
                   className="text-black w-full px-4 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
                   required
                 />
-                <ValidationError prefix="Email" field="email" errors={state.errors} />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Your Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -82,13 +99,17 @@ export default function ContactPage() {
                   className="text-black w-full px-4 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
                   required
                 ></textarea>
-                <ValidationError prefix="Message" field="message" errors={state.errors} />
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                />
               </div>
 
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="bg-black text-white px-6 py-2 text-sm rounded-md hover:bg-blue-700 transition flex items-center justify-center gap-2 disabled:opacity-60"
+                className="bg-black text-white px-6 py-2 text-sm rounded-md hover:bg-black/80 cursor-pointer transition flex items-center justify-center gap-2 disabled:opacity-60"
               >
                 {state.submitting ? (
                   <>
@@ -123,14 +144,57 @@ export default function ContactPage() {
 
           {/* Contact Info */}
           <div className="mt-8 border-t pt-6 text-sm text-gray-700">
-            <p><strong>Email:</strong> {userData.email}</p>
-            <p className="mt-1"><strong>Phone:</strong> {userData.phoneNo}</p>
+            <p>
+              <strong>Email:</strong>{" "}
+              <a
+                href={`mailto:${userData.email}`}
+                className="text-gray-700  hover:underline"
+                aria-label={`Email ${userData.email}`} 
+              >
+                {userData.email}
+              </a>
+            </p>
+
+            <p className="mt-1">
+              <strong>Phone:</strong>{" "}
+              <a
+                href={`tel:${userData.phoneNo}`}
+                className="text-gray-700  hover:underline"
+                aria-label={`Call ${userData.phoneNo}`}
+              >
+                {userData.phoneNo}
+              </a>
+            </p>
 
             <div className="flex gap-4 mt-4 text-gray-700 text-lg">
-              <a href={userData.linkedin} aria-label="LinkedIn" className="hover:text-black"><Linkedin size={20} /></a>
-              <a href={userData.github} aria-label="GitHub" className="hover:text-black"><Github size={20} /></a>
-              <a href={userData.x} aria-label="Twitter" className="hover:text-black"><Twitter size={20} /></a>
-              <a href={userData.telegram} aria-label="Telegram" className="hover:text-black"><Send size={20} /></a>
+              <a
+                href={userData.linkedin}
+                aria-label="LinkedIn"
+                className="hover:text-black"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href={userData.github}
+                aria-label="GitHub"
+                className="hover:text-black"
+              >
+                <Github size={20} />
+              </a>
+              <a
+                href={userData.x}
+                aria-label="Twitter"
+                className="hover:text-black"
+              >
+                <Twitter size={20} />
+              </a>
+              <a
+                href={userData.telegram}
+                aria-label="Telegram"
+                className="hover:text-black"
+              >
+                <Send size={20} />
+              </a>
             </div>
           </div>
         </div>
