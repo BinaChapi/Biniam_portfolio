@@ -31,7 +31,7 @@ export const userData: UserProfile = {
   linkedin: "https://www.linkedin.com/in/binachapi",
   github: "https://github.com/BinaChapi",
   x: "https://twitter.com/BinaChapi",
-  phoneNo: "+251 799 11 1485",
+  phoneNo: "+251 939 69 1485",
   telegram: "https://t.me/BinaChapi",
   email: "bmulugeta452@gmail.com",
   location: "Addis Ababa, Ethiopia",
