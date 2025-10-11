@@ -88,7 +88,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="bg-blue-600 text-white px-6 py-2 text-sm rounded-md hover:bg-blue-700 transition flex items-center justify-center gap-2 disabled:opacity-60"
+                className="bg-black text-white px-6 py-2 text-sm rounded-md hover:bg-blue-700 transition flex items-center justify-center gap-2 disabled:opacity-60"
               >
                 {state.submitting ? (
                   <>
