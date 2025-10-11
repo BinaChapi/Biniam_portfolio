@@ -1,6 +1,6 @@
 import { Skill } from "../types/Skill";
-import { FaReact, FaNodeJs, FaPython, FaJs, FaJava } from "react-icons/fa";
-import { SiCplusplus, SiMongodb, SiMysql } from "react-icons/si";
+import { FaReact, FaNodeJs, FaPython, FaJs, FaJava, FaDocker, FaGithub } from "react-icons/fa";
+import { SiCplusplus, SiExpress, SiMongodb, SiMysql } from "react-icons/si";
 import { UserProfile } from "../types/UserProfile";
 
 // Image path
@@ -14,9 +14,12 @@ const skills: Skill[] = [
   { name: "React Native", rating: 3, icon: <FaReact className="text-blue-500 text-3xl" /> },
   { name: "Python", rating: 2, icon: <FaPython className="text-blue-600 text-3xl" /> },
   { name: "C++", rating: 2, icon: <SiCplusplus className="text-indigo-600 text-3xl" /> },
+  { name: "Express", rating: 2.5, icon: <SiExpress className="text-amber-500 text-3xl"/> },
   { name: "Java", rating: 2.5, icon: <FaJava className="text-red-600 text-3xl" /> },
   { name: "MySQL", rating: 2.5, icon: <SiMysql className="text-blue-600 text-3xl" /> },
   { name: "MongoDB", rating: 2, icon: <SiMongodb className="text-green-600 text-3xl" /> },
+  { name: "Docker", rating: 2.5, icon: <FaDocker className="text-blue-600 text-3xl" /> }, 
+  { name: "Git && Github", rating: 2.5, icon: <FaGithub  className="text-black text-3xl" /> },  
 ];
 
 // Combined export

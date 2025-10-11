@@ -11,12 +11,12 @@ export default function Hero() {
         style={{
           background: `linear-gradient(
             270deg,
-            rgba(255, 94, 98, 0.3),
-            rgba(255, 195, 113, 0.3),
+            rgba(108, 94, 255, 0.3),
+            rgba(255, 246, 113, 0.3),
             rgba(94, 255, 175, 0.3),
-            rgba(113, 168, 255, 0.3),
+            rgba(113, 255, 127, 0.3),
             rgba(201, 113, 255, 0.3),
-            rgba(255, 113, 179, 0.3)
+            rgba(113, 255, 231, 0.3)
           )`,
           backgroundSize: "1200% 1200%",
         }}
