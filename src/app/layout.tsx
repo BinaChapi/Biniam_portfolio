@@ -4,7 +4,7 @@ import "../../styles/globals.css";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  title: "Biniam Mulugeta | Portfolio",
+  title: "Biniam Mulugeta | Junior Full Stack Developer",
   description: "Web & Mobile App Developer Portfolio",
 };
 
