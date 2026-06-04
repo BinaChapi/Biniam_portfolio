@@ -16,7 +16,7 @@ export default function AboutPage() {
             <p className="text-xl font-semibold text-black/90 mb-4">{userData.fname} {userData.lname}</p>
             <div className="space-y-4 text-gray-800">
               <p>
-                I’m a 23-year-old Computer Science student with a deep passion for software development, especially in the field of mobile app web app development.
+                I am a 23-year-old graduate with a Bachelor's degree in Computer Science and a deep passion for software development, especially in the fields of mobile and web application development
               </p>
               <p>
                 My journey began with interest and quickly evolved into a mission to build high-performance applications that improve people’s lives. I enjoy designing and coding user-centric solutions, and I’m always exploring new technologies and frameworks.
