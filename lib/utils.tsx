@@ -26,7 +26,7 @@ const skills: Skill[] = [
 export const userData: UserProfile = {
   fname: "Biniam",
   lname: "Mulugeta",
-  age: 23,
+  age: 24,
   profile: profileImg,
   linkedin: "https://www.linkedin.com/in/binachapi",
   github: "https://github.com/BinaChapi",
