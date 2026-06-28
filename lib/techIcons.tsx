@@ -8,8 +8,11 @@ import {
   SiExpo,
   SiSupabase,
   SiGooglemaps,
+  SiPostgresql,
+  SiSolidity,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
+import { FaEthereum } from "react-icons/fa";
 import { JSX } from "react";
 
 // 1. Define tech name types
@@ -24,7 +27,10 @@ export type TechName =
   | "Expo"
   | "Supabase"
   | "Google Map"
-  | "REST API";
+  | "REST API"
+  | "PostgreSQL"
+  | "Solidity"
+  | "Ethereum";
 
 // 2. Typed icon map
 export const techIcons: Record<TechName, JSX.Element> = {
@@ -39,6 +45,9 @@ export const techIcons: Record<TechName, JSX.Element> = {
   Supabase: <SiSupabase className="text-green-500" />,
   "Google Map": <SiGooglemaps className="text-green-500" />,
   "REST API": <TbApi className="text-blue-500" />,
+  PostgreSQL: <SiPostgresql className="text-blue-700" />,
+  Solidity: <SiSolidity className="text-purple-600" />,
+  Ethereum: <FaEthereum className="text-blue-600" />,
 };
 
 // 3. Optional: fallback if an unknown tech is passed

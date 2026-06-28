@@ -3,10 +3,11 @@ import { Project } from "../types/project";
 export const projects: Project[] = [
   {
     title: "CatchUp Agency Website",
-    description:
-      "A modern and responsive website built for a Marketing and Advertising Agency, designed to showcase their services, portfolio, and client success stories. The platform highlights branding, digital campaigns, and creative strategies while ensuring a user-friendly experience with clean layouts and intuitive navigation. The site is optimized for performance and SEO, making it easy for potential clients to discover the agency and engage with their offerings",
-    excerpt:
-      "Marketing & advertising agency website built with Next.js + Tailwind.",
+    problem: "Marketing and advertising agencies need professional, modern websites to showcase services, portfolio, and client success stories. CatchUp Agency lacked an online presence that converted visitors into leads.",
+    role: "Full Stack Developer - Designed and developed the entire website from scratch.",
+    challenge: "Creating a responsive design that works seamlessly across all devices while maintaining fast page speed and SEO optimization.",
+    description: "A modern and responsive website built for a Marketing and Advertising Agency, featuring service showcases, portfolio display, client testimonials, and clear call-to-actions to drive lead generation.",
+    excerpt: "Full-stack marketing agency website with Next.js and Tailwind CSS for fast SEO-optimized pages",
     images: [
       "/images/catchup_1.png",
       "/images/catchup_2.png",
@@ -18,15 +19,16 @@ export const projects: Project[] = [
     tech: ["React", "Next.js", "Tailwind"],
     github: "https://github.com/BinaChapi/Catch_Up",
     type: "web",
-    liveUrl: "https://catch-up-sandy.vercel.app/", // optional live site if hosted
-    status: "live", // live | in-progress | prototype | archived
+    liveUrl: "https://catch-up-sandy.vercel.app/",
+    status: "live",
   },
   {
     title: "Currency Exchange App",
-    description:
-      "A mobile app that allows users to exchange both local and foreign currencies with real-time conversion rates and historical data tracking.",
-    excerpt:
-      "Mobile app for real-time currency conversion with history & maps.",
+    problem: "Travelers and individuals doing business across borders need an easy way to convert currencies, view real-time rates, and track historical trends.",
+    role: "Mobile Developer - Built core features including currency conversion and map integration.",
+    challenge: "Integrating reliable real-time exchange rate APIs and ensuring smooth performance across both iOS and Android.",
+    description: "A mobile app that allows users to exchange both local and foreign currencies with real-time conversion rates and historical data tracking.",
+    excerpt: "React Native mobile application with real-time currency conversion, Google Maps integration for nearby exchange spots",
     images: [
       "/images/ExC.jpg",
       "/images/Ex1.jpg",
@@ -43,9 +45,11 @@ export const projects: Project[] = [
   },
   {
     title: "DareChain – Challenge, Prove, and Earn!",
-    description:
-      "DareChain is a fun and rewarding social app where users create daring challenges, accept them, and earn coins by proving they've completed them. Everything is moderated for fairness.",
-    excerpt: "Social app to create, accept, and prove dares with rewards.",
+    problem: "Social apps lack fun, engaging ways for friends to challenge each other, prove completion, and earn rewards in a moderated environment.",
+    role: "Full Stack Mobile Developer - Designed UI/UX, built the mobile app and backend integration.",
+    challenge: "Implementing fair moderation system and reward distribution logic that keeps user-generated content.",
+    description: "DareChain is a fun and rewarding social app where users create daring challenges, accept them, prove completion by uploading proof, and earn coins. Everything is moderated for fairness.",
+    excerpt: "Social dare-based social platform with React Native + Expo + Supabase",
     images: [
       "/images/photo_1.jpg",
       "/images/photo_2.jpg",
@@ -73,9 +77,11 @@ export const projects: Project[] = [
   },
   {
     title: "Online Chat-based Gaming Platform",
-    description:
-      "A dynamic mobile app blending social interaction with casual gaming. Users can join chat rooms, play quick multiplayer games, and compete on leaderboards while chatting in real time.",
-    excerpt: "Realtime chat gaming platform with multiplayer casual games.",
+    problem: "People want to play casual games with friends while chatting in real time, but most platforms separate these experiences.",
+    role: "Lead Mobile Developer - Architected the app structure and built real-time features.",
+    challenge: "Building smooth real-time chat and multiplayer game sync using Supabase.",
+    description: "A dynamic mobile app blending social interaction with casual gaming. Users can join chat rooms, play quick multiplayer games, and compete on leaderboards while chatting in real time.",
+    excerpt: "Real-time chat gaming platform with multiplayer casual games and leaderboards",
     images: [
       "/images/online_1.jpg",
       "/images/online_2.jpg",

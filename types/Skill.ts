@@ -3,5 +3,10 @@ import { ReactElement } from "react";
 export interface Skill {
   name: string;
   rating: number;
-  icon: string | ReactElement; // Icon can be a string or a React element
+  icon: string | ReactElement;
+}
+
+export interface SkillCategory {
+  name: string;
+  skills: Skill[];
 }

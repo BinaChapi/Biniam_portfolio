@@ -1,4 +1,4 @@
-import { Skill } from "./Skill";
+import { Skill, SkillCategory } from "./Skill";
 
 export interface UserProfile {
   fname: string;
@@ -7,10 +7,12 @@ export interface UserProfile {
   profile: string;
   linkedin: string;
   github: string;
-  x:string,
+  x: string;
   phoneNo: string;
   telegram: string;
   email: string;
   location: string;
-  skills: Skill[];
+  skills: Skill[]; // keep for backward compatibility
+  skillCategories: SkillCategory[];
+  currentlyWorkingOn?: string;
 }
