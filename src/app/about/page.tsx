@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import { userData } from "../../../lib/utils";
+
+export const metadata: Metadata = {
+  title: "About | Biniam Mulugeta",
+  description: "Learn more about Biniam Mulugeta, a Full Stack Developer from Addis Ababa, Ethiopia specializing in React, Next.js, Node.js, and Web3.",
+};
 
 export default function AboutPage() {
   return (
