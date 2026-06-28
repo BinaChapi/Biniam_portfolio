@@ -73,6 +73,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
+        <meta
+          name="google-site-verification"
+          content="DVSsXWxUgICVwfFPkX5erhdFsOW141YclOQ5OHIFQdw"
+        />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <script
           type="application/ld+json"
